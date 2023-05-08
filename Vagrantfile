@@ -21,7 +21,6 @@ Vagrant.configure("2") do |config|
 		vb.memory = "2048"
 	end
   	manager.vm.provision "shell", path: "docker.sh"
-  	manager.vm.provision "shell", path: "portainer.sh"
   end
   
   config.vm.define "worker" do |worker|
@@ -31,7 +30,6 @@ Vagrant.configure("2") do |config|
                 vb.memory = "2048"
         end
         worker.vm.provision "shell", path: "docker.sh"
-        # worker.vm.provision "shell", path: "portainer.sh"
   end   
 
 
