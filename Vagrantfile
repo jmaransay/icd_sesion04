@@ -16,7 +16,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "manager" do |manager|
 	# We assign a different IP to sesion04 so that both machines can live together
-    	manager.vm.network "private_network", ip: "192.168.56.12"
+    	manager.vm.hostname = "manager"
+ 	manager.vm.network "private_network", ip: "192.168.56.12"
 	manager.vm.provider "virtualbox" do |vb|
 		vb.memory = "2048"
 	end
@@ -25,7 +26,8 @@ Vagrant.configure("2") do |config|
   
   config.vm.define "worker" do |worker|
         # We assign a different IP to sesion04 so that both machines can live together
-        worker.vm.network "private_network", ip: "192.168.56.13"
+        worker.vm.hostname = "worker"
+	worker.vm.network "private_network", ip: "192.168.56.13"
         worker.vm.provider "virtualbox" do |vb|
                 vb.memory = "2048"
         end
