@@ -1,2 +1,2 @@
-# icd_sesion06
-A Vagrant virtual machine (Ubuntu 22.04) with Docker and portainer.io installed and another virtual machine just with Docker.
+# icd_sesion04
+A pair of Vagrant virtual machines (Ubuntu 24.04) with Docker.
